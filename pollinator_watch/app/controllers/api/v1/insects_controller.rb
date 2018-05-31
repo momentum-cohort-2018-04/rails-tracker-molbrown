@@ -1,4 +1,4 @@
-class InsectsController < ApplicationController
+class Api::V1::InsectsController < ApplicationController
   before_action :set_insect, only: [:show, :update, :destroy]
 
   # GET /insects
@@ -9,6 +9,7 @@ class InsectsController < ApplicationController
 
   # GET /insects/1
   def show
+    @insect = Insect.find(params[:id])
     # render json: @insect
   end
 
@@ -17,7 +18,7 @@ class InsectsController < ApplicationController
     @insect = Insect.new(insect_params)
 
     if @insect.save
-      render json: @insect, status: :created, location: @insect
+      render json: @insect, status: :created, location: @insects 
     else
       render json: @insect.errors, status: :unprocessable_entity
     end
@@ -45,6 +46,6 @@ class InsectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def insect_params
-      params.require(:insect).permit(:name, :species, :latitude, :longitude, :plant, :notes)
+      params.require(:insect).permit(:name, :species, :latitude, :longitude, :plant, :image)
     end
 end
