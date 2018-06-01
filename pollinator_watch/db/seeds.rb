@@ -5,16 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require 'faker'
 
-
 4.times do
     Insect.create!(
         name:'Carpenter Bee',
         species: 'Xylocopa virginica',
         latitude: Faker::Address.latitude.to_f,
         longitude: Faker::Address.longitude.to_f,
-        plant: 'salvia'
+        plant: 'salvia',
     )
     end
 
@@ -24,7 +24,7 @@ require 'faker'
         species: 'Xylocopa virginica',
         latitude: Faker::Address.latitude.to_f,
         longitude: Faker::Address.longitude.to_f,
-        plant: 'mountain mint'
+        plant: 'mountain mint',
     )
     end
 
@@ -34,7 +34,7 @@ require 'faker'
         species: 'Xylocopa virginica',
         latitude: Faker::Address.latitude.to_f,
         longitude: Faker::Address.longitude.to_f,
-        plant: 'basil'
+        plant: 'basil',
     )
     end
 
@@ -44,7 +44,7 @@ require 'faker'
         species: 'Apis mellifera',
         latitude: Faker::Address.latitude.to_f,
         longitude: Faker::Address.longitude.to_f,
-        plant: 'purple coneflower'
+        plant: 'purple coneflower',
     )
     end
 
@@ -64,7 +64,7 @@ require 'faker'
         species: 'Bombus impatiens',
         latitude: Faker::Address.latitude.to_f,
         longitude: Faker::Address.longitude.to_f,
-        plant: 'salvia'
+        plant: 'salvia',
     )
     end
 
@@ -74,7 +74,7 @@ require 'faker'
         species: 'Bombus impatiens',
         latitude: Faker::Address.latitude.to_f,
         longitude: Faker::Address.longitude.to_f,
-        plant: 'tomato'
+        plant: 'tomato',
     )
     end
 
@@ -94,7 +94,7 @@ require 'faker'
         species: 'Lasioglossum sopinci',
         latitude: Faker::Address.latitude.to_f,
         longitude: Faker::Address.longitude.to_f,
-        plant: 'mountain mint'
+        plant: 'mountain mint',
     )
     end
 
@@ -104,7 +104,7 @@ require 'faker'
         species: 'Lasioglossum sopinci',
         latitude: Faker::Address.latitude.to_f,
         longitude: Faker::Address.longitude.to_f,
-        plant: 'salvia'
+        plant: 'salvia',
     )
     end
 
@@ -114,3 +114,4 @@ require 'faker'
         insect_id: Faker::Number.between(1, 40)
     )
     end
+

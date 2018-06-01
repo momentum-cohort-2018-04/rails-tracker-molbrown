@@ -10,12 +10,12 @@ class Api::V1::InsectsController < ApplicationController
   # GET /insects/1
   def show
     @insect = Insect.find(params[:id])
-    # render json: @insect
   end
 
   # POST /insects
   def create
     @insect = Insect.new(insect_params)
+    # @insect.image.attach(params[:image])
 
     if @insect.save
       render json: @insect, status: :created, location: @insects 
@@ -46,6 +46,6 @@ class Api::V1::InsectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def insect_params
-      params.require(:insect).permit(:name, :species, :latitude, :longitude, :plant, :image)
+      params.require(:insect).permit(:name, :species, :latitude, :longitude, :plant)
     end
 end

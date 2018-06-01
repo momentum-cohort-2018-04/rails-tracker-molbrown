@@ -28,5 +28,6 @@ json.data do
         json.longitude @insect.longitude
         json.plant @insect.plant
         json.notes @insect.notes
+        # json.href url_for(@insect.image)
     end
 end

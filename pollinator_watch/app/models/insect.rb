@@ -1,6 +1,6 @@
 class Insect < ApplicationRecord
     has_many :notes, foreign_key: "insect_id", dependent: :destroy
-    has_one_attached :image
+    # has_one_attached :image
 
     validates :name, presence: true
     validates :species, presence: true
