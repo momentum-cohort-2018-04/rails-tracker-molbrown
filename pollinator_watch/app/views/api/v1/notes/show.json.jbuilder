@@ -6,10 +6,7 @@
 json.links do
     json.self api_v1_insect_note_path(@insect, @note)
     json.list api_v1_insect_notes_path
-    json.update do
-        json.method "PUT"
-        json.href api_v1_insect_note_path(@insect, @note)
-    end
+
     json.delete do
         json.method "DELETE"
         json.href api_v1_insect_note_path(@insect, @note)
